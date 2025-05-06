@@ -1,0 +1,40 @@
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/variables";
+
+.container{
+  margin-bottom: 120px;
+}
+h1{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Lora', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: $main-blue-color;
+}
+
+h2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Lora', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: $main-blue-color;
+}
+h3{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Lora', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: $main-blue-color;
+}
+p{
+  margin-bottom: 10px;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: $dark-text-color;
+}

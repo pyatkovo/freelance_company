@@ -1,0 +1,88 @@
+@import "../../../../assets/styles/variables";
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-logo {
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .header-menu {
+      nav {
+        ul {
+          list-style-type: none;
+          display: flex;
+
+          li {
+            margin-right: 30px; /* Отступ между пунктами меню */
+            border-bottom: 2px solid transparent;
+            box-sizing: border-box;
+            a {
+              text-decoration: none;
+              color: $dark-text-color;
+              &.active{
+                color: $main-blue-color;
+              }
+            }
+            &:hover {
+              border-bottom: 2px solid $main-blue-color;
+            }
+            &:last-child{
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    .header-number {
+      margin-right: 25px;
+
+      a {
+        text-decoration: none;
+        color: $main-blue-color;
+      }
+    }
+
+    .header-actions {
+      display: flex;
+
+      justify-content: flex-end;
+      .login, .profile {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 7px; /* Отступ между иконкой и текстом */
+        }
+
+        span {
+
+        }
+      }
+
+      .login {
+        display: flex;
+        align-items: center;
+      }
+
+      .profile {
+        .profile-action {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

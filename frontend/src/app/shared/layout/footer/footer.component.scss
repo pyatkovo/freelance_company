@@ -1,0 +1,125 @@
+@import "../../../../assets/styles/variables";
+
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $dark-text-color;
+  background-color: #B9D5FD;
+  padding: 40px 0 55px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+
+      .footer-top-logo {
+        cursor: pointer;
+        margin-right: 40px;
+      }
+
+      .footer-top-menu nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+
+        li {
+          cursor: pointer;
+          border-bottom: 2px solid transparent;
+
+          a {
+            color: $dark-text-color;
+            text-decoration: none;
+          }
+
+          &:hover {
+            border-bottom: 2px solid $main-blue-color;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+
+      .footer-bottom-item {
+        &.address {
+          max-width: 253px;
+        }
+
+        &.phone {
+          max-width: 155px;
+
+          .footer-bottom-item-action {
+            margin-top: 10px;
+            .footer-button {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 500;
+              font-size: 12px;
+              width: 155px;
+              padding: 10px;
+              &:hover{
+                transform: scale(0.97);
+              }
+            }
+          }
+        }
+
+        &.email {
+          max-width: 130px;
+
+        }
+
+        &.socials {
+          .footer-bottom-item-info {
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            align-items: center;
+          }
+        }
+
+        .footer-bottom-item-title {
+          color: $main-blue-color;
+          margin-bottom: 10px;
+        }
+
+        .footer-bottom-item-info {
+          a{
+            color: $dark-text-color;
+            text-decoration: none;
+          }
+        }
+
+      }
+
+      .footer-social-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg {
+          margin-right: 10px;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .footer-copyright {
+      margin-top: 6px;
+      color: $main-blue-color;
+    }
+  }
+}

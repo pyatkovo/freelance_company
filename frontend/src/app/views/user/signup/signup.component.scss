@@ -1,0 +1,25 @@
+@import "../../../../assets/styles/auth-form";
+
+.signup {
+  .container {
+    align-items: center;
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    .auth-checkbox {
+      align-items: flex-start;
+a{
+  text-decoration: none;
+  margin-left: 5px;
+  color: $main-blue-color;
+  border-bottom: 1px solid $main-blue-color;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+      input {
+        margin-top: 4px;
+      }
+    }
+  }
+}

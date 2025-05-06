@@ -1,0 +1,185 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+
+.blog {
+  .container {
+    margin-bottom: 120px;
+    .blog-title {
+      font-family: 'Lora', sans-serif;
+      font-weight: 400;
+      font-size: 38px;
+      color: $main-blue-color;
+      margin-bottom: 40px;
+    }
+
+    .blog-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .blog-applied-filters {
+        flex-wrap: wrap;
+        display: flex;
+
+        .blog-applied-filter {
+          display: flex;
+          align-items: center;
+          padding: 8px 20px;
+          border: 2px solid $main-blue-color;
+          border-radius: 5px;
+          margin-right: 10px;
+
+          span {
+            font-family: Montserrat, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: $main-blue-color;
+          }
+
+          a {
+            cursor: pointer;
+            width: 14px;
+            height: 14px;
+            margin-left: 9px;
+          }
+        }
+      }
+
+      .blog-filters {
+        position: relative;
+        width: 148px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark-text-color;
+        box-sizing: border-box;
+        transition: background-color 0.2s ease;
+        transition: 0.2s ease;
+        &.open{
+          width: 257px;
+          border-radius: 5px 5px 0 0;
+          background: #b9d5fd;
+
+        }
+        .blog-filters-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          user-select: none;
+          color: $dark-text-color;
+
+          svg {
+            transition: transform 0.3s ease;
+            &.rotated {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .blog-filter-body {
+          box-sizing: border-box;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          z-index: 10;
+          width: 100%;
+          background: #fff;
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+          border-radius: 0 0 5px 5px;
+
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height 0.3s ease;
+
+
+          &.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease;
+            border: 1px solid #b9d5fd;
+
+          }
+
+          .catalog-sorting-item {
+            padding: 12px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &.selected {
+              font-weight: 600; // выбранная жирнее
+              color: $dark-text-color;
+            }
+
+            &:not(.selected) {
+              color: #b0b0b0; // не выбранные — светло-серые
+            }
+
+            &:hover {
+              background-color: #f5f7fa;
+            }
+
+            .status-icon {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    .blog-layout {
+      margin-bottom: 60px;
+
+      .blog-articles {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 24px;
+      }
+    }
+
+    .pagination {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+
+      .pagination-arrow{
+        cursor: pointer;
+        height: 19px;
+        width: 10px;
+        &.disabled{
+          cursor: default;
+          opacity: 0.4;
+        }
+      }
+
+      .pagination-pages {
+        margin: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .pagination-page {
+          cursor: pointer;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          text-align: center;
+          color: $dark-text-color;
+
+          &.active {
+            color: $main-blue-color;
+          }
+        }
+      }
+    }
+
+
+  }
+}

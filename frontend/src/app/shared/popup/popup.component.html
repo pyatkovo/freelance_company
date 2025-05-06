@@ -1,0 +1,44 @@
+<div class="popup-overlay" *ngIf="isVisible">
+  <div class="popup" [formGroup]="popupForm">
+    <div class="close-action" (click)="close()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.6499" x2="13.9564" y2="14.6707" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62971" x2="1.90277" y2="14.6505" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="popup-main" *ngIf="!successRequest">
+      <div class="popup-header">{{ type === 'consultation' ? 'Заявка на консультацию' : 'Заявка на услугу' }}</div>
+      <div class="popup-inputs">
+        <div class="popup-input" *ngIf="type !== 'consultation'">
+          <select formControlName="category">
+            <option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+          </select>
+        </div>
+        <div class="popup-input">
+          <input type="text" formControlName="name" placeholder="Ваше имя" [ngStyle]="{'border-color': popupForm.get('name')?.invalid &&
+                 (popupForm.get('name')?.dirty || popupForm.get('name')?.touched) ? 'red' : '' }">
+          <div class="popup-input-error" *ngIf="popupForm.get('name')?.invalid &&
+                 (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)">* введите имя с большой буквы и без пробелов</div>
+        </div>
+        <div class="popup-input">
+          <input type="tel" formControlName="phone" placeholder="Ваш номер телефона" [ngStyle]="{'border-color': popupForm.get('phone')?.invalid &&
+                 (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched) ? 'red' : '' }">
+          <div class="popup-input-error" *ngIf="popupForm.get('phone')?.invalid &&
+                 (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)">* введите номер в формате +7 926 123 45 67</div>
+        </div>
+      </div>
+      <div class="popup-action">
+        <button class="button popup-button" [disabled]="popupForm.invalid"
+                (click)="sendPopupRequest()">{{ type === 'consultation' ? 'Заказать консультацию' : 'Оставить заявку' }}</button>
+      </div>
+      <div class="error-message" *ngIf="errorMessage">произошла ошибка при отправке формы, попробуйте еще раз</div>
+    </div>
+
+
+    <div class="popup-thanks" *ngIf="successRequest">
+      <div class="popup-thanks-title">Спасибо за вашу заявку!</div>
+      <div class="popup-thanks-text">Мы свяжемся с вами при первой же возможности.</div>
+      <div class="popup-thanks-action"><button class="button popup-thanks-button" (click)="close()">Окей</button></div>
+    </div>
+  </div>
+</div>

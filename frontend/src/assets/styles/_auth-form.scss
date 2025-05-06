@@ -1,0 +1,107 @@
+@import "variables";
+@import "fonts";
+
+.auth-form {
+  margin-right: 178px;
+
+  .auth-title {
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+
+    color: $main-blue-color;
+    margin-bottom: 40px;
+  }
+
+  .auth-inputs {
+    margin-bottom: 35px;
+
+    .auth-input {
+      margin-bottom: 5px;
+      position: relative;
+
+      input {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        border: 2px solid $main-blue-color;
+        border-radius: 3px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 422px;
+
+        &::placeholder {
+
+          color: #a8aba7;
+        }
+      }
+      svg{
+        position: absolute;
+        top: 22px;
+        right: 15px;
+      }
+    }
+
+    .auth-checkbox {
+      max-width: 422px;
+      display: flex;
+      align-items: center;
+      color: $dark-text-color;
+
+      input {
+        margin: 0;
+      }
+
+      label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $dark-text-color;
+        margin-left: 10px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .auth-button {
+    margin-top: 40px;
+
+    button.button {
+      width: 422px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .auth-link {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8px;
+    color: $dark-text-color;
+
+
+    a {
+      text-decoration: none;
+      margin-left: 5px;
+      color: $main-blue-color;
+      border-bottom: 1px solid transparent;
+      box-sizing: border-box;
+      transition: 0.2s;
+
+      &:hover {
+        transition: 0.2s;
+        border-bottom: 1px solid $main-blue-color;
+      }
+    }
+  }
+}
+.page-image{
+  height: 390px;
+  width: 607px;
+}

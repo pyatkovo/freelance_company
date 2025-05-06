@@ -1,0 +1,328 @@
+<section class="main">
+  <div class="container">
+    <div class="main-carousel">
+      <a class="move-backward" (click)="owlCar.prev()">
+        <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="15" width="28" height="15" transform="rotate(90 15 0)" fill="url(#pattern0_18701_355)"/>
+          <defs>
+            <pattern id="pattern0_18701_355" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_18701_355" transform="matrix(0.00284091 0 0 0.00530303 0 -0.00909091)"/>
+            </pattern>
+            <image id="image0_18701_355" width="352" height="192" preserveAspectRatio="none"
+                   xlink:href="data:image/png;base64,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"/>
+          </defs>
+        </svg>
+      </a>
+
+      <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-template carouselSlide>
+          <div class="carousel-slide first-slide">
+            <div class="carousel-slide-info">
+              <div class="carousel-extra">Предложение месяца</div>
+              <div class="carousel-title">Продвижение в Instagram для вашего бизнеса<span> -15%!</span></div>
+              <div class="carousel-text"></div>
+              <div class="carousel-action">
+                <button class="button" (click)="openPopup('order', 'Таргет')">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="carousel-slide second-slide">
+            <div class="carousel-slide-info">
+              <div class="carousel-extra">Акция</div>
+              <div class="carousel-title">Нужен грамотный<span> копирайтер?</span></div>
+              <div class="carousel-text">Весь декабрь у нас действует акция на работу копирайтера.</div>
+              <div class="carousel-action">
+                <button class="button" (click)="openPopup('order', 'Копирайтинг')">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="carousel-slide third-slide">
+            <div class="carousel-slide-info">
+              <div class="carousel-extra">Новость дня</div>
+              <div class="carousel-title"><span>6 место</span> в ТОП-10 <br> SMM-агенств Москвы!
+              </div>
+              <div class="carousel-text">Мы благодарим каждого, кто голосовал за нас!</div>
+              <div class="carousel-action">
+                <button class="button" (click)="openPopup('order', 'SMM')">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+
+      <a class="move-forward" (click)="owlCar.next()">
+        <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect y="28" width="28" height="15" transform="rotate(-90 0 28)" fill="url(#pattern0_18701_350)"/>
+          <defs>
+            <pattern id="pattern0_18701_350" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_18701_350" transform="matrix(0.00284091 0 0 0.00530303 0 -0.00909091)"/>
+            </pattern>
+            <image id="image0_18701_350" width="352" height="192" preserveAspectRatio="none"
+                   xlink:href="data:image/png;base64,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"/>
+          </defs>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="offers">
+  <div class="container">
+    <div class="offer-title" id="services">
+      Услуги, которые мы предлагаем
+    </div>
+    <div class="offers-items">
+      <div class="offer-item">
+        <div class="offer-item-image"><img src="assets/images/pages/main/offers/offer-1.png" alt="Offer 1"></div>
+        <div class="offer-item-title">Создание сайтов</div>
+        <div class="offer-item-text">В краткие сроки мы создадим качественный и самое главное продающий сайт для
+          продвижения Вашего бизнеса!
+        </div>
+        <div class="offer-item-info">
+          <div class="offer-item-info-price">От 7 500₽</div>
+          <button class="button" (click)="openPopup('order', 'Фриланс')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-item-image"><img src="assets/images/pages/main/offers/offer-2.png" alt="Offer 2"></div>
+        <div class="offer-item-title">Продвижение</div>
+        <div class="offer-item-text">Вам нужен качественный SMM-специалист или грамотный таргетолог? Мы готовы оказать
+          Вам услугу “Продвижения” на наивысшем уровне!
+        </div>
+        <div class="offer-item-info">
+          <div class="offer-item-info-price">От 3 500₽</div>
+          <button class="button" (click)="openPopup('order', 'SMM')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-item-image"><img src="assets/images/pages/main/offers/offer-3.png" alt="Offer 3"></div>
+        <div class="offer-item-title">Реклама</div>
+        <div class="offer-item-text">Без рекламы не может обойтись ни один бизнес или специалист. Обращаясь к нам, мы
+          гарантируем быстрый прирост клиентов за счёт правильно настроенной рекламы.
+        </div>
+        <div class="offer-item-info">
+          <div class="offer-item-info-price">От 1 000₽</div>
+          <button class="button" (click)="openPopup('order', 'Таргет')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="offer-item">
+        <div class="offer-item-image"><img src="assets/images/pages/main/offers/offer-4.png" alt="Offer 4"></div>
+        <div class="offer-item-title">Копирайтинг</div>
+        <div class="offer-item-text">Наши копирайтеры готовы написать Вам любые продающие текста, которые не только
+          обеспечат рост охватов, но и помогут выйти на новый уровень в продажах.
+        </div>
+        <div class="offer-item-info">
+          <div class="offer-item-info-price">От 750₽</div>
+          <button class="button" (click)="openPopup('order', 'Копирайтинг')">Подробнее</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--ABOUT-->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-block">
+      <div class="about-image">
+        <img src="assets/images/pages/main/about.png" alt="About">
+      </div>
+      <div class="about-info">
+        <div class="about-info-title">
+          Кто мы и чем мы занимаемся?
+        </div>
+        <div class="about-info-description">
+          <b>АйтиШторм</b> — это ваш помощник №1 при решении таких вопросов, как продвижение
+          в сети, разработка сайтов для бизнеса и личного бренда, сторисмейкинг, копирайтинг, маркетинг, разработка
+          визуальной концепции и создание инфопродуктов. Компания была основана в 2019 году и за всё это время смогла
+          выйти в ТОП-10 агенств, предлагающих услуги продвижения в сети.
+        </div>
+        <div class="about-info-advantages">
+          <div class="about-info-advantages-title">
+            Наши преимущества
+          </div>
+          <div class="about-info-advantages-items">
+            <div class="about-info-advantages-item">
+              <div class="about-info-advantages-item-number">1</div>
+              <div class="about-info-advantages-item-text"><span>Мастерски вовлекаем аудиторию в процесс.</span> Мы
+                увеличиваем
+                процент вовлечённости за короткий промежуток времени.
+              </div>
+            </div>
+
+            <div class="about-info-advantages-item">
+              <div class="about-info-advantages-item-number">2</div>
+              <div class="about-info-advantages-item-text"><span>Разрабатываем бомбическую визуальную концепцию.</span>
+                Наши
+                специалисты знают как создать уникальный образ вашего проекта.
+              </div>
+            </div>
+
+            <div class="about-info-advantages-item">
+              <div class="about-info-advantages-item-number">3</div>
+              <div class="about-info-advantages-item-text"><span>Создаём мощные воронки с помощью текстов.</span> Наши
+                копирайтеры
+                создают не только вкусные текста, но и классные воронки.
+              </div>
+            </div>
+
+            <div class="about-info-advantages-item">
+              <div class="about-info-advantages-item-number">4</div>
+              <div class="about-info-advantages-item-text"><span>Помогаем продавать больше.</span> Мы не только помогаем
+                разработать
+                стратегию по продажам, но также корректируем её под нужды заказчика.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--POPULAR-->
+<section class="popular">
+  <div class="container">
+    <div class="popular-title">Популярные статьи из блога</div>
+    <div class="popular-cards">
+      <article-card *ngFor="let article of articles" [article]="article"></article-card>
+    </div>
+    <div class="popular-action">
+      <div class="popular-action-text" routerLink="/articles">Перейти в блог</div>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+          fill="#709FDC"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!--REVIEWS-->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-title">
+      Отзывы о нашей работе
+    </div>
+    <div class="reviews-carousel">
+      <a class="review-backward" (click)="owlCarRev.prev()">
+        <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="10" width="18.6667" height="10" transform="rotate(90 10 0)" fill="url(#pattern0_40_554)"/>
+          <defs>
+            <pattern id="pattern0_40_554" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_40_554" transform="matrix(0.00284091 0 0 0.00530303 0 -0.00909089)"/>
+            </pattern>
+            <image id="image0_40_554" width="352" height="192" preserveAspectRatio="none"
+                   xlink:href="data:image/png;base64,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"/>
+          </defs>
+        </svg>
+      </a>
+
+      <owl-carousel-o [options]="customOptionsReviews" #owlCarRev>
+        <ng-template carouselSlide *ngFor="let review of reviews">
+          <div class="review-item">
+            <div class="review-item-people">
+              <div class="review-item-photo"
+                   style="background-image: url('/assets/images/pages/main/reviews/{{review.image}}')"></div>
+              <div class="review-item-name">{{review.name}}</div>
+            </div>
+            <div class="review-item-text">
+              {{review.text}}
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+
+      <a class="review-forward" (click)="owlCarRev.next()">
+        <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect y="19" width="18.6667" height="10" transform="rotate(-90 0 19)" fill="url(#pattern0_40_553)"/>
+          <defs>
+            <pattern id="pattern0_40_553" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_40_553" transform="matrix(0.00284091 0 0 0.00530303 0 -0.00909089)"/>
+            </pattern>
+            <image id="image0_40_553" width="352" height="192" preserveAspectRatio="none"
+                   xlink:href="data:image/png;base64,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"/>
+          </defs>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contacts">
+  <div class="container">
+    <div class="contact-map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8f973e147ab6a538b7c4f21015c31629375d430b0602e741de41def854d7b24&amp;source=constructor"
+        width="607" height="438" frameborder="0"></iframe>
+    </div>
+    <div class="contact-info">
+      <div class="contact-title">Контакты</div>
+      <div class="contact-info-item">
+        <div class="contact-info-item-title">Адрес</div>
+        <div class="contact-info-item-text">Главный офис компании АйтиШторм находится по адресу Пресненская наб., 12,
+          Москва, Россия, 123317.
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-item-title">Телефон</div>
+        <div class="contact-info-item-text">+7 (499) 343-13-34</div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-item-title">Электронный адрес</div>
+        <div class="contact-info-item-text">info@itstorm.com</div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-item-title">Мы в социальных сетях</div>
+        <div class="contact-info-item-socials">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_14_131)">
+              <path
+                d="M5.73458 0.267334C2.73165 0.267334 0.267578 2.73141 0.267578 5.73434V24.2646C0.267578 27.2675 2.73165 29.7316 5.73458 29.7316H24.2649C27.2678 29.7316 29.7319 27.2675 29.7319 24.2646V5.73434C29.7319 2.73141 27.2678 0.267334 24.2649 0.267334H5.73458ZM5.73458 2.9459H24.2649C25.8186 2.9459 27.0533 4.18056 27.0533 5.73434V24.2646C27.0533 25.8184 25.8186 27.053 24.2649 27.053H5.73458C4.1808 27.053 2.94615 25.8184 2.94615 24.2646V5.73434C2.94615 4.18056 4.1808 2.9459 5.73458 2.9459ZM14.623 9.951C13.6395 9.94053 12.8025 9.951 12.3316 10.1812C12.0177 10.3329 11.7771 10.6782 11.9235 10.6939C12.1067 10.72 12.5199 10.809 12.7397 11.1072C13.0222 11.4891 13.0117 12.3523 13.0117 12.3523C13.0117 12.3523 13.1687 14.7274 12.6298 15.0256C12.2584 15.2297 11.7509 14.8164 10.6523 12.9278C10.0925 11.9547 9.66873 10.8822 9.66873 10.8822C9.66873 10.8822 9.59026 10.6834 9.44378 10.5788C9.2659 10.448 9.02002 10.4061 9.02002 10.4061L6.39899 10.4218C6.39899 10.4218 6.00663 10.4375 5.86537 10.6049C5.73458 10.7619 5.85491 11.0706 5.85491 11.0706C5.85491 11.0706 7.90569 15.8679 10.2285 18.2849C12.3578 20.5031 14.7748 20.3566 14.7748 20.3566H15.8734C15.8734 20.3566 16.203 20.32 16.3704 20.1421C16.5273 19.9747 16.5221 19.6608 16.5221 19.6608C16.5221 19.6608 16.5012 18.1907 17.1813 17.971C17.8562 17.7618 18.7141 19.394 19.6297 20.0218C20.3255 20.4979 20.8539 20.3932 20.8539 20.3932L23.3022 20.3566C23.3022 20.3566 24.5787 20.2781 23.9719 19.2684C23.9248 19.19 23.6214 18.5256 22.1565 17.1653C20.6184 15.7424 20.8225 15.9725 22.6745 13.5085C23.7992 12.007 24.2492 11.0915 24.1079 10.6939C23.9719 10.3224 23.1453 10.4218 23.1453 10.4218L20.3883 10.4375C20.3883 10.4375 20.1842 10.4114 20.0325 10.5003C19.886 10.5892 19.7918 10.7985 19.7918 10.7985C19.7918 10.7985 19.3524 11.9599 18.7717 12.9487C17.5475 15.0309 17.0505 15.146 16.8517 15.0152C16.3861 14.7117 16.5012 13.8014 16.5012 13.158C16.5012 11.1333 16.8098 10.2963 15.9048 10.0766C15.6066 10.0033 15.3869 9.95623 14.623 9.951Z"
+                fill="#B9D5FD"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_14_131">
+                <rect width="30" height="30" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.9993 0.000488281C6.7298 0.000488281 -0.000732422 6.73102 -0.000732422 15.0005C-0.000732422 23.27 6.7298 30.0005 14.9993 30.0005C23.2687 30.0005 29.9993 23.27 29.9993 15.0005C29.9993 6.73102 23.2687 0.000488281 14.9993 0.000488281ZM14.9993 2.50049C21.9176 2.50049 27.4993 8.08212 27.4993 15.0005C27.4993 21.2847 22.8889 26.4521 16.8596 27.3491V18.6455H20.4192L20.9783 15.0298H16.8596V13.0547C16.8596 11.5534 17.3528 10.2202 18.7566 10.2202H21.0125V7.06592C20.6162 7.01217 19.7776 6.89502 18.1926 6.89502C14.8826 6.89502 12.9436 8.6425 12.9436 12.625V15.0298H9.54028V18.6455H12.9436V27.3174C7.01034 26.3388 2.49927 21.2168 2.49927 15.0005C2.49927 8.08212 8.0809 2.50049 14.9993 2.50049Z"
+              fill="#B9D5FD"/>
+          </svg>
+
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_14_133)">
+              <path
+                d="M8.93181 0.267334C4.1763 0.267334 0.268311 4.1701 0.268311 8.93084V21.0681C0.268311 25.8236 4.17107 29.7316 8.93181 29.7316H21.0691C25.8246 29.7316 29.7326 25.8289 29.7326 21.0681V8.93084C29.7326 4.17533 25.8298 0.267334 21.0691 0.267334H8.93181ZM8.93181 2.9459H21.0691C24.3807 2.9459 27.054 5.61924 27.054 8.93084V21.0681C27.054 24.3797 24.3807 27.053 21.0691 27.053H8.93181C5.62022 27.053 2.94688 24.3797 2.94688 21.0681V8.93084C2.94688 5.61924 5.62022 2.9459 8.93181 2.9459ZM22.9106 5.87559C22.2357 5.87559 21.6969 6.41445 21.6969 7.08932C21.6969 7.76419 22.2357 8.30305 22.9106 8.30305C23.5855 8.30305 24.1243 7.76419 24.1243 7.08932C24.1243 6.41445 23.5855 5.87559 22.9106 5.87559ZM15.0005 6.96376C10.5798 6.96376 6.96474 10.5788 6.96474 14.9995C6.96474 19.4202 10.5798 23.0352 15.0005 23.0352C19.4211 23.0352 23.0362 19.4202 23.0362 14.9995C23.0362 10.5788 19.4211 6.96376 15.0005 6.96376ZM15.0005 9.64233C17.9772 9.64233 20.3576 12.0227 20.3576 14.9995C20.3576 17.9762 17.9772 20.3566 15.0005 20.3566C12.0237 20.3566 9.64331 17.9762 9.64331 14.9995C9.64331 12.0227 12.0237 9.64233 15.0005 9.64233Z"
+                fill="#B9D5FD"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_14_133">
+                <rect width="30" height="30" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

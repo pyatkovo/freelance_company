@@ -1,0 +1,39 @@
+<section class="login" [formGroup]="loginForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">Войти в личный кабинет</div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': loginForm.get('email')?.invalid &&
+                 (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) ? 'red' : '' }"
+                 placeholder="Электронная почта" formControlName="email">
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" placeholder="Пароль" formControlName="password" #passwordField
+                 [ngStyle]="{'border-color': loginForm.get('password')?.invalid &&
+                 (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) ? 'red' : '' }">
+          <svg *ngIf="!visibility" (click)="togglePasswordVisibility()" width="20" height="15" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.7323 2.47092C2.60145 3.12447 1.53199 4.13417 0.523926 5.50001C2.45692 8.11906 4.61565 9.42859 7.00012 9.42859C8.08437 9.42859 9.12196 9.15782 10.1129 8.61628M11.3227 7.80194C12.0693 7.20108 12.7871 6.43378 13.4763 5.50001C11.5433 2.88097 9.38458 1.57144 7.00012 1.57144C6.36736 1.57144 5.7505 1.66366 5.14953 1.84809" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.04785 0.857147L11.9526 10.1936" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg *ngIf="visibility" (click)="togglePasswordVisibility()" width="20" height="15" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.791504 6.50001C0.791504 6.50001 3.95817 0.833344 9.49984 0.833344C15.0415 0.833344 18.2082 6.50001 18.2082 6.50001" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0.791504 6.5C0.791504 6.5 3.95817 12.1667 9.49984 12.1667C15.0415 12.1667 18.2082 6.5 18.2082 6.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 8.625C10.8117 8.625 11.875 7.67361 11.875 6.5C11.875 5.32639 10.8117 4.375 9.5 4.375C8.18832 4.375 7.125 5.32639 7.125 6.5C7.125 7.67361 8.18832 8.625 9.5 8.625Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" id="remember" formControlName="rememberMe"><label for="remember" >Запомнить меня</label>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="loginForm.invalid" (click)="login()">Войти</button>
+      </div>
+      <div class="auth-link">Нет аккаунта? <a routerLink="/signup">Пройдите регистрацию</a></div>
+    </div>
+    <div class="page-image">
+      <img src="assets/images/pages/login.png" alt="Login">
+    </div>
+  </div>
+</section>
